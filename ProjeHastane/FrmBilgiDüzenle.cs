@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace ProjeHastane
@@ -15,6 +16,11 @@ namespace ProjeHastane
         public FrmBilgiDüzenle()
         {
             InitializeComponent();
+        }
+        public string Tcno;
+        private void FrmBilgiDüzenle_Load(object sender, EventArgs e)
+        {
+            MskTC.Text = Tcno;
         }
     }
 }

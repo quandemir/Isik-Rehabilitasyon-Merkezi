@@ -62,6 +62,7 @@
             this.BtnKayıtOl.TabIndex = 10;
             this.BtnKayıtOl.Text = "KAYIT OL";
             this.BtnKayıtOl.UseVisualStyleBackColor = false;
+            this.BtnKayıtOl.Click += new System.EventHandler(this.BtnKayıtOl_Click);
             // 
             // label3
             // 
@@ -174,8 +175,10 @@
             // 
             // FrmHastaKayıt
             // 
+            this.AcceptButton = this.BtnKayıtOl;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(535, 450);
             this.Controls.Add(this.label6);
@@ -191,6 +194,7 @@
             this.Controls.Add(this.BtnKayıtOl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayıt";
             this.Text = "FrmHastaKayıt";
             this.ResumeLayout(false);

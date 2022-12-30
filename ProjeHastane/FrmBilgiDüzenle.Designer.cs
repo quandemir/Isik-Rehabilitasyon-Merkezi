@@ -191,6 +191,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FrmBilgiDüzenle";
             this.Text = "FrmBilgiDüzenle";
+            this.Load += new System.EventHandler(this.FrmBilgiDüzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
