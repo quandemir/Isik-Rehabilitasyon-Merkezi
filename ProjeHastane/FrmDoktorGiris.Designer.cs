@@ -62,6 +62,7 @@
             this.BtnGiris.TabIndex = 11;
             this.BtnGiris.Text = "GİRİŞ";
             this.BtnGiris.UseVisualStyleBackColor = true;
+            this.BtnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
             // 
             // label3
             // 
@@ -106,6 +107,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmDoktorGiris";
             this.Text = "FrmDoktorGiris";
+            this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

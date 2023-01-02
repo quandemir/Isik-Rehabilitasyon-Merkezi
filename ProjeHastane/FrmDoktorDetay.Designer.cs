@@ -118,6 +118,7 @@
             this.BtnÇıkış.TabIndex = 6;
             this.BtnÇıkış.Text = "Çıkış";
             this.BtnÇıkış.UseVisualStyleBackColor = true;
+            this.BtnÇıkış.Click += new System.EventHandler(this.BtnÇıkış_Click);
             // 
             // BtnDuyurular
             // 
@@ -127,6 +128,7 @@
             this.BtnDuyurular.TabIndex = 4;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // BtnGuncelle
             // 
@@ -136,6 +138,7 @@
             this.BtnGuncelle.TabIndex = 3;
             this.BtnGuncelle.Text = "Bilgi Düzenle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // groupBox3
             // 
@@ -171,6 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDoktorDetay";
             this.Text = "FrmDoktorDetay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

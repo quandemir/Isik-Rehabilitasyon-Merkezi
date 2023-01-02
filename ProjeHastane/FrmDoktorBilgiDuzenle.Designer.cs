@@ -128,6 +128,7 @@
             this.BtnBilgiGuncelle.TabIndex = 37;
             this.BtnBilgiGuncelle.Text = "GÜNCELLE";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = false;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // label3
             // 
@@ -170,6 +171,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDoktorBilgiDuzenle";
             this.Text = "FrmDoktorBilgiDuzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -69,7 +69,7 @@ namespace ProjeHastane
         {
             //randevu listesini dolduruyor
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevularr where RandevuBrans='" + CmbBrans.Text+ "'and RandevuDoktor='" + CmbDoktor.Text+"'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevularr where RandevuBrans='" + CmbBrans.Text + "'" + " and RandevuDoktor='" + CmbDoktor.Text+"'"+" and RandevuDurum=0", bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
@@ -90,6 +90,12 @@ namespace ProjeHastane
 
         private void BtnRandevuAl_Click(object sender, EventArgs e)
         {
+            SqlCommand komut = new SqlCommand("update Tbl_Randevularr set RandevuDurum=1,HastaTc=@p1 where Randevuid=@p2", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", LblTC.Text);
+            komut.Parameters.AddWithValue("@p2", Txtid.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevu Alındı", "Uyarı", MessageBoxButtons.OK,MessageBoxIcon.Warning);
 
         }
     }
