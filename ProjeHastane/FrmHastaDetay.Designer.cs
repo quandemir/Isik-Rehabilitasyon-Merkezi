@@ -36,6 +36,8 @@
             this.LblTC = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txtid = new System.Windows.Forms.Label();
             this.LnkBilgiDuzenle = new System.Windows.Forms.LinkLabel();
             this.BtnRandevuAl = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.CmbBrans = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Txtid = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             groupBox3 = new System.Windows.Forms.GroupBox();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -146,6 +146,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RANDEVU PANELİ";
             // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(108, 61);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(172, 32);
+            this.textBox1.TabIndex = 8;
+            // 
+            // Txtid
+            // 
+            this.Txtid.AutoSize = true;
+            this.Txtid.Location = new System.Drawing.Point(69, 67);
+            this.Txtid.Name = "Txtid";
+            this.Txtid.Size = new System.Drawing.Size(32, 24);
+            this.Txtid.TabIndex = 7;
+            this.Txtid.Text = "id:";
+            // 
             // LnkBilgiDuzenle
             // 
             this.LnkBilgiDuzenle.AutoSize = true;
@@ -165,6 +182,7 @@
             this.BtnRandevuAl.TabIndex = 5;
             this.BtnRandevuAl.Text = "Randevu Al";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
+            this.BtnRandevuAl.Click += new System.EventHandler(this.BtnRandevuAl_Click);
             // 
             // label6
             // 
@@ -222,22 +240,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(672, 262);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // Txtid
-            // 
-            this.Txtid.AutoSize = true;
-            this.Txtid.Location = new System.Drawing.Point(69, 67);
-            this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(32, 24);
-            this.Txtid.TabIndex = 7;
-            this.Txtid.Text = "id:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(108, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 32);
-            this.textBox1.TabIndex = 8;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // FrmHastaDetay
             // 

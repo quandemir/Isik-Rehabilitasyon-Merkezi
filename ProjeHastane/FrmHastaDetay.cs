@@ -37,7 +37,7 @@ namespace ProjeHastane
 
             //Randevu geçmişi
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where HastaTc=" + tc, bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevularr where HastaTc=" + tc, bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource= dt;
 
@@ -69,7 +69,7 @@ namespace ProjeHastane
         {
             //randevu listesini dolduruyor
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where RandevuBrans='" + CmbBrans.Text+"'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevularr where RandevuBrans='" + CmbBrans.Text+ "'and RandevuDoktor='" + CmbDoktor.Text+"'", bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
@@ -80,6 +80,17 @@ namespace ProjeHastane
             FrmBilgiDüzenle fr = new FrmBilgiDüzenle();
             fr.Tcno = LblTC.Text;
             fr.Show();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            Txtid.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void BtnRandevuAl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

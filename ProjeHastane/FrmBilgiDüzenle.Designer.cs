@@ -140,6 +140,7 @@
             // 
             // BtnBilgiDuzenle
             // 
+            this.BtnBilgiDuzenle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnBilgiDuzenle.BackColor = System.Drawing.Color.MidnightBlue;
             this.BtnBilgiDuzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnBilgiDuzenle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -149,6 +150,7 @@
             this.BtnBilgiDuzenle.TabIndex = 24;
             this.BtnBilgiDuzenle.Text = "GÜNCELLE";
             this.BtnBilgiDuzenle.UseVisualStyleBackColor = false;
+            this.BtnBilgiDuzenle.Click += new System.EventHandler(this.BtnBilgiDuzenle_Click);
             // 
             // label3
             // 
@@ -189,6 +191,7 @@
             this.Controls.Add(this.BtnBilgiDuzenle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDüzenle";
             this.Text = "FrmBilgiDüzenle";
             this.Load += new System.EventHandler(this.FrmBilgiDüzenle_Load);
