@@ -46,7 +46,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HASTA GİRİŞ PANELİ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -124,6 +124,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "FrmHastaGiris";
+            this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

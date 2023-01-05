@@ -19,16 +19,14 @@ namespace ProjeHastane
         }
 
         sqlbaglantisi bgl = new sqlbaglantisi();
-        private void BtnBilgiGuncelle_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         public string TCnumara;
         private void FrmSekreterDetay_Load(object sender, EventArgs e)
         {
+            //giriş formundan tc yi çektik
             LblTC.Text = TCnumara;
 
-            //ad soyad çekme
+            //tc ile ad soyad çekme
             SqlCommand komut1=new SqlCommand("select SekreterAdSoyad from Tbl_Sekreter where SekreterTc=@p1",bgl.baglanti());
             komut1.Parameters.AddWithValue("@p1",LblTC.Text);
             SqlDataReader dr1 = komut1.ExecuteReader();
@@ -48,7 +46,8 @@ namespace ProjeHastane
 
             //doktorları getirme
             DataTable dt2 = new DataTable();
-            SqlDataAdapter da2 = new SqlDataAdapter("select (DoktorAd+ ' ' + DoktorSoyad) as Doktorlar,DoktorBrans from Tbl_Doktorlar", bgl.baglanti());
+            SqlDataAdapter da2 = new SqlDataAdapter("select (DoktorAd+ ' ' + DoktorSoyad) as Doktorlar,DoktorBrans " +
+                "from Tbl_Doktorlar", bgl.baglanti());
             da2.Fill(dt2);
             dataGridView2.DataSource = dt2;
             bgl.baglanti().Close();
@@ -75,9 +74,9 @@ namespace ProjeHastane
             bgl.baglanti().Close();
             MessageBox.Show("Randevu oluşturuldu");
         }
-        //branşa göre doktor getirme
         private void CmbBrans_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //branşa göre doktor getirme
             CmbDoktor.Items.Clear();
             SqlCommand komut = new SqlCommand("select DoktorAd,DoktorSoyad from Tbl_Doktorlar where DoktorBrans=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", CmbBrans.Text);
@@ -90,13 +89,11 @@ namespace ProjeHastane
 
         }
 
-        private void RchDuyuru_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void BtnDuyuruOlustur_Click(object sender, EventArgs e)
         {
+            //duyuru oluşturma
             SqlCommand komut = new SqlCommand("insert into Tbl_Duyurular (duyuru) values (@d1)", bgl.baglanti());
             komut.Parameters.AddWithValue("@d1", RchDuyuru.Text);
             komut.ExecuteNonQuery();
@@ -119,6 +116,7 @@ namespace ProjeHastane
 
         private void BtnListe_Click(object sender, EventArgs e)
         {
+            //randevu formuna gider
             FrmRandevuListesi fr = new FrmRandevuListesi();
             fr.Show();
         }

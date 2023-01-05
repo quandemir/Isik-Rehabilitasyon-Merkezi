@@ -23,7 +23,8 @@ namespace ProjeHastane
         {
             MskTC.Text= TCNO;
 
-            //bilgileri dolduruyor
+            //bilgileri otomatik dolduruyor
+
             SqlCommand komut = new SqlCommand("select * from Tbl_Doktorlar where DoktorTc=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", MskTC.Text);
             SqlDataReader dr = komut.ExecuteReader();

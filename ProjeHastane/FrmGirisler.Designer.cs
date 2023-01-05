@@ -94,7 +94,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Doktor";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -105,7 +105,7 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Sekreter";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox1
             // 
@@ -167,7 +167,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmGirisler";
             this.Text = "Giris";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -16,13 +16,7 @@ namespace ProjeHastane
             this.Bransid = bransid;
             this.BransAd = bransAd;
         }
-        //private string Bransid; // field
-
-        //public string Brans_id   // property
-        //{
-        //    get { return Bransid; }   // get method
-        //    set { Bransid = value; }  // set method
-        //}
+       
         public void setBransid(int bransid)
         {
             this.Bransid = bransid;

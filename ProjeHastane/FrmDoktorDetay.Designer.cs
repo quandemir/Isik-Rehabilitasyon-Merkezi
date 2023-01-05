@@ -87,6 +87,7 @@
             this.LblTC.TabIndex = 13;
             this.LblTC.Text = "00000000000";
             this.LblTC.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.LblTC.Click += new System.EventHandler(this.LblTC_Click);
             // 
             // label3
             // 

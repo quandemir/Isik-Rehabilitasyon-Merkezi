@@ -151,7 +151,7 @@
             this.RchDuyuru.Size = new System.Drawing.Size(266, 218);
             this.RchDuyuru.TabIndex = 0;
             this.RchDuyuru.Text = "";
-            this.RchDuyuru.TextChanged += new System.EventHandler(this.RchDuyuru_TextChanged);
+           // this.RchDuyuru.TextChanged += new System.EventHandler(this.RchDuyuru_TextChanged);
             // 
             // groupBox3
             // 

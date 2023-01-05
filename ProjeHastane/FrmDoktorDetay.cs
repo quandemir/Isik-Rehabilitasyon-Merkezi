@@ -21,6 +21,7 @@ namespace ProjeHastane
         public string TC;
         private void FrmDoktorDetay_Load(object sender, EventArgs e)
         {
+            //bi önceki formdan yani doktor giriş çekilen tc
             LblTC.Text = TC;
 
             //Tc ye göre ad soyad ekleme
@@ -43,6 +44,7 @@ namespace ProjeHastane
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
             FrmDoktorBilgiDuzenle fr = new FrmDoktorBilgiDuzenle();
+            //tc yi o forma taşıyor
             fr.TCNO=LblTC.Text;
             fr.Show();
         }
@@ -56,6 +58,11 @@ namespace ProjeHastane
         {
             FrmDuyurular fr = new FrmDuyurular();
             fr.Show();
+        }
+
+        private void LblTC_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

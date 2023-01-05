@@ -19,12 +19,7 @@ namespace ProjeHastane
         }
         sqlbaglantisi bgl=new sqlbaglantisi();
 
-        private void FrmDoktorGiris_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
+    
         private void BtnGiris_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("select * from Tbl_Doktorlar where DoktorTc=@p1 and DoktorSifre=@p2", bgl.baglanti());
@@ -34,6 +29,7 @@ namespace ProjeHastane
             if (dr.Read())
             {
                 FrmDoktorDetay fr = new FrmDoktorDetay();
+                //girişteki doktor tc sini doktor paneline çekiyor
                 fr.TC = MskTC.Text;
                 fr.Show();
                 this.Hide();

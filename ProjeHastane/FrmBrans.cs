@@ -21,6 +21,7 @@ namespace ProjeHastane
 
         private void FrmBrans_Load(object sender, EventArgs e)
         {
+            //branşları sağa yani datagridde gösteriyor
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Branslar", bgl.baglanti());
             da.Fill(dt);
@@ -40,6 +41,7 @@ namespace ProjeHastane
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //bilgiyi tıklayınca otomatik dolduuryor
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             Txtid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             TxtBrans.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();

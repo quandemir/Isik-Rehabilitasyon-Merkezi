@@ -24,7 +24,7 @@ namespace ProjeHastane
 
         private void FrmBilgiDüzenle_Load(object sender, EventArgs e)
         {
-            //Bütün veri tabanındaki bilgileri düzenle sayfasına çektik
+            //Bütün veri tabanındaki hastanın bilgilerini düzenle sayfasına çektik
             MskTC.Text = Tcno;
             SqlCommand komut = new SqlCommand("select * from Tbl_Hastalarr where HastaTc=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1",MskTC.Text);
@@ -42,7 +42,8 @@ namespace ProjeHastane
 
         private void BtnBilgiDuzenle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut2 = new SqlCommand("update Tbl_Hastalarr set HastaAd=@p1,HastaSoyad=@p2,HastaTelefon=@p3,HastaSifre=@p4,HastaCinsiyet=@p5 where HastaTc=@p6", bgl.baglanti());
+            SqlCommand komut2 = new SqlCommand("update Tbl_Hastalarr set HastaAd=@p1,HastaSoyad=@p2,HastaTelefon=@p3,HastaSifre=@p4," +
+                "HastaCinsiyet=@p5 where HastaTc=@p6", bgl.baglanti());
             komut2.Parameters.AddWithValue("@p1",TxtAd.Text);
             komut2.Parameters.AddWithValue("@p2",TxtSoyad.Text);
             komut2.Parameters.AddWithValue("@p3",MskTelefon.Text);

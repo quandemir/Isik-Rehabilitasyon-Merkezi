@@ -73,7 +73,7 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Soyad:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -171,7 +171,7 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Cinsiyet:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FrmHastaKayıt
             // 

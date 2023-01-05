@@ -107,7 +107,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmDoktorGiris";
             this.Text = "FrmDoktorGiris";
-            this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
+           // this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

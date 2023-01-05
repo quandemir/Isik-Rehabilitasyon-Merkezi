@@ -37,15 +37,10 @@ namespace ProjeHastane
             }
             bgl.baglanti().Close();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void BtnEkle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into Tbl_Doktorlar (DoktorAd,DoktorSoyad,DoktorBrans,DoktorTc,DoktorSifre) values (@p1,@p2,@p3,@p4,@p5)", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("insert into Tbl_Doktorlar (DoktorAd,DoktorSoyad,DoktorBrans," +
+                "DoktorTc,DoktorSifre) values (@p1,@p2,@p3,@p4,@p5)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1",TxtAd.Text);
             komut.Parameters.AddWithValue("@p2",TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3",CmbBrans.Text);
@@ -57,8 +52,6 @@ namespace ProjeHastane
 
         }
 
-       
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //tabloya tıklayınca verileri otomatik dolduruyor
@@ -69,7 +62,6 @@ namespace ProjeHastane
             MskTC.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             TxtSifre.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
         }
-
         private void BtnSil_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("delete from Tbl_Doktorlar where DoktorTc=@p1", bgl.baglanti());
@@ -81,7 +73,8 @@ namespace ProjeHastane
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("update Tbl_Doktorlar set DoktorAd=@p1,DoktorSoyad=@p2,DoktorBrans=@p3,DoktorSifre=@p5 where DoktorTc=@p4", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("update Tbl_Doktorlar set DoktorAd=@p1,DoktorSoyad=@p2," +
+                "DoktorBrans=@p3,DoktorSifre=@p5 where DoktorTc=@p4", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3", CmbBrans.Text);

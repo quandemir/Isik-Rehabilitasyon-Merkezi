@@ -19,11 +19,8 @@ namespace ProjeHastane
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //veri tabanı bağlantısını çagırabilmek için nesne oluşturduk
         sqlbaglantisi bgl=new sqlbaglantisi();
 
         private void LnkUyeOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -41,8 +38,10 @@ namespace ProjeHastane
             if (dr.Read())
             {
                 FrmHastaDetay fr = new FrmHastaDetay();
+                //bu formdan detay formuna tc yi çektik
                 fr.tc = MskTC.Text;
                 fr.Show();
+                //hide ile giriş formunu gizledik
                 this.Hide();
             }
             else
@@ -50,6 +49,11 @@ namespace ProjeHastane
                 MessageBox.Show("Hatalı Tc & Şifre");
             }
             bgl.baglanti().Close();
+        }
+
+        private void FrmHastaGiris_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

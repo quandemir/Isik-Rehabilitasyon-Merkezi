@@ -18,28 +18,11 @@ namespace ProjeHastane
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // hasta girişi için
             FrmHastaGiris fr = new FrmHastaGiris();
             fr.Show();
             this.Hide();
@@ -47,6 +30,7 @@ namespace ProjeHastane
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //doktor girişi için
             FrmDoktorGiris fr=new FrmDoktorGiris();
             fr.Show();
             this.Hide();
@@ -55,6 +39,7 @@ namespace ProjeHastane
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //sekreter girşi için
             FrmSekreterGiris fr =new FrmSekreterGiris();
             fr.Show();
             this.Hide();
